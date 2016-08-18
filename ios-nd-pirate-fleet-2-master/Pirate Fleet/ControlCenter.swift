@@ -62,6 +62,14 @@ struct Ship {
 
 // TODO: Add custom initializers
     
+    init(length: Int, location: GridLocation, isVertical: Bool) {
+        self.length = length
+        self.hitTracker = HitTracker()
+        self.location = location
+        self.isVertical = isVertical
+        isWooden = false
+    }
+    
     init(length: Int, location: GridLocation, isVertical: Bool, isWooden: Bool) {
         self.length = length
         self.hitTracker = HitTracker()
@@ -108,29 +116,29 @@ class ControlCenter {
     
     func placeItemsOnGrid(human: Human) {
         
-        let smallShip = Ship(length: 2, location: GridLocation(x: 3, y: 4), isVertical: true, isWooden: false)
+        let smallShip = Ship(length: 2, location: GridLocation(x: 3, y: 4), isVertical: true, isWooden: true)
         human.addShipToGrid(smallShip)
         
         print(smallShip.cells)
         
-        let mediumShip1 = Ship(length: 3, location: GridLocation(x: 0, y: 0), isVertical: false, isWooden: false)
+        let mediumShip1 = Ship(length: 3, location: GridLocation(x: 0, y: 0), isVertical: false)
         human.addShipToGrid(mediumShip1)
         
         print(mediumShip1.cells)
         
-        let mediumShip2 = Ship(length: 3, location: GridLocation(x: 3, y: 1), isVertical: false, isWooden: false)
+        let mediumShip2 = Ship(length: 3, location: GridLocation(x: 3, y: 1), isVertical: false, isWooden: true)
         human.addShipToGrid(mediumShip2)
         
-        let largeShip = Ship(length: 4, location: GridLocation(x: 6, y: 3), isVertical: true, isWooden: false)
+        let largeShip = Ship(length: 4, location: GridLocation(x: 6, y: 3), isVertical: true)
         human.addShipToGrid(largeShip)
         
-        let xLargeShip = Ship(length: 5, location: GridLocation(x: 7, y: 2), isVertical: true, isWooden: false)
+        let xLargeShip = Ship(length: 5, location: GridLocation(x: 7, y: 2), isVertical: true, isWooden: true)
         human.addShipToGrid(xLargeShip)
         
         let mine1 = Mine(location: GridLocation(x: 6, y: 0), penaltyText: "Mine")
         human.addMineToGrid(mine1)
         
-        let mine2 = Mine(location: GridLocation(x: 3, y: 3), penaltyText: "Mine")
+        let mine2 = Mine(location: GridLocation(x: 3, y: 3), guaranteesHit: true, penaltyText: "Mine")
         human.addMineToGrid(mine2)
         
         let seamonster1 = SeaMonster(location: GridLocation(x: 5, y: 6))
