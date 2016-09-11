@@ -8,8 +8,13 @@
 
 extension Hero {
     
-    func removeDuplicates(inventory: [UDItem]) -> [UDItem] {        
-        return [UDItem]()
+    func removeDuplicates(inventory: [UDItem]) -> [UDItem] {
+        var nonDuplicatedItems = [UDItem]()
+        for item in inventory {
+            if !nonDuplicatedItems.contains(item){
+                nonDuplicatedItems.append(item)
+            }
+        }
+        return nonDuplicatedItems
     }
-    
 }

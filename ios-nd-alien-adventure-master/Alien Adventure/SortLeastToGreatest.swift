@@ -9,9 +9,13 @@
 extension Hero {
     
     func sortLeastToGreatest(inventory: [UDItem]) -> [UDItem] {
-        return [UDItem]()
+        let sorted = inventory.sort({(item1: UDItem, item2: UDItem) -> Bool in
+            if item1.rarity.rawValue == item2.rarity.rawValue {
+                return item1.baseValue < item2.baseValue
+            }
+            return  item1.rarity.rawValue < item2.rarity.rawValue})
+        return sorted
     }
-    
 }
 
 // If you have completed this function and it is working correctly, feel free to skip this part of the adventure by opening the "Under the Hood" folder, and making the following change in Settings.swift: "static var RequestsToSkip = 5"
