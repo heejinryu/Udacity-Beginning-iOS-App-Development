@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Silly_Song" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your Name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="khr-m1-sV5">
+                                <rect key="frame" x="60" y="160" width="480" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RfB-jd-bpN"/>
+                                    <constraint firstAttribute="height" constant="50" id="qhZ-i4-jH1"/>
+                                    <constraint firstAttribute="width" constant="200" id="r1U-YU-DLI"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="qhZ-i4-jH1"/>
+                                        <exclude reference="r1U-YU-DLI"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="displayLyrics:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="BAO-dc-0Ud"/>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="oFX-u0-lGA"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="twC-CN-gmO">
+                                <rect key="frame" x="40" y="240" width="520" height="340"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="EMl-Vf-HS5"/>
+                                    <constraint firstAttribute="height" constant="240" id="iGO-z5-KO9"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EMl-Vf-HS5"/>
+                                        <exclude reference="iGO-z5-KO9"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silly Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcT-3V-vGG">
+                                <rect key="frame" x="50" y="40" width="500" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="2m7-9l-eOn"/>
+                                    <constraint firstAttribute="height" constant="100" id="qQ9-lT-2hQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="z5E-eG-isC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="60"/>
+                                <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2m7-9l-eOn"/>
+                                        <exclude reference="qQ9-lT-2hQ"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="twC-CN-gmO" firstAttribute="top" secondItem="khr-m1-sV5" secondAttribute="bottom" constant="20" id="0BC-bd-Ibj"/>
+                            <constraint firstItem="khr-m1-sV5" firstAttribute="top" secondItem="PcT-3V-vGG" secondAttribute="bottom" constant="30" id="1lq-6N-N4R"/>
+                            <constraint firstItem="PcT-3V-vGG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="3CC-EL-JbE"/>
+                            <constraint firstItem="twC-CN-gmO" firstAttribute="centerX" secondItem="PcT-3V-vGG" secondAttribute="centerX" id="58F-Nh-K2g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PcT-3V-vGG" secondAttribute="trailing" constant="30" id="5Hz-uL-Gc4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="khr-m1-sV5" secondAttribute="trailing" constant="239" id="BNR-GW-raw"/>
+                            <constraint firstItem="khr-m1-sV5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="180" id="DVL-sP-SUC"/>
+                            <constraint firstItem="PcT-3V-vGG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="GIf-Ny-nuV"/>
+                            <constraint firstItem="twC-CN-gmO" firstAttribute="top" secondItem="khr-m1-sV5" secondAttribute="bottom" constant="42" id="Gbs-5f-tN8"/>
+                            <constraint firstItem="twC-CN-gmO" firstAttribute="top" secondItem="khr-m1-sV5" secondAttribute="bottom" constant="24" id="HBH-iD-3ue"/>
+                            <constraint firstItem="twC-CN-gmO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ME5-mN-XKG"/>
+                            <constraint firstItem="khr-m1-sV5" firstAttribute="top" secondItem="PcT-3V-vGG" secondAttribute="bottom" constant="20" id="SBL-Cf-Cxr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="twC-CN-gmO" secondAttribute="bottom" constant="20" id="WnW-hZ-egx"/>
+                            <constraint firstItem="twC-CN-gmO" firstAttribute="trailing" secondItem="khr-m1-sV5" secondAttribute="trailing" id="ZXh-Fv-CFf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="khr-m1-sV5" secondAttribute="trailing" constant="180" id="aex-5T-8ak"/>
+                            <constraint firstItem="twC-CN-gmO" firstAttribute="top" secondItem="khr-m1-sV5" secondAttribute="bottom" constant="30" id="c74-50-i6u"/>
+                            <constraint firstItem="khr-m1-sV5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="192" id="dju-pX-9Pv"/>
+                            <constraint firstItem="PcT-3V-vGG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="e0C-MP-jpd"/>
+                            <constraint firstItem="twC-CN-gmO" firstAttribute="top" secondItem="khr-m1-sV5" secondAttribute="bottom" constant="30" id="eej-5T-tHX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="twC-CN-gmO" secondAttribute="trailing" constant="20" id="fqF-Jg-ZXz"/>
+                            <constraint firstItem="PcT-3V-vGG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gw0-nE-adh"/>
+                            <constraint firstItem="khr-m1-sV5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="jWp-uc-z8X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="khr-m1-sV5" secondAttribute="trailing" constant="40" id="kQW-e6-ty7"/>
+                            <constraint firstItem="twC-CN-gmO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="wNJ-f6-cam"/>
+                            <constraint firstItem="khr-m1-sV5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xDO-fL-djZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GIf-Ny-nuV"/>
+                                <exclude reference="0BC-bd-Ibj"/>
+                                <exclude reference="58F-Nh-K2g"/>
+                                <exclude reference="Gbs-5f-tN8"/>
+                                <exclude reference="HBH-iD-3ue"/>
+                                <exclude reference="ZXh-Fv-CFf"/>
+                                <exclude reference="eej-5T-tHX"/>
+                                <exclude reference="1lq-6N-N4R"/>
+                                <exclude reference="BNR-GW-raw"/>
+                                <exclude reference="DVL-sP-SUC"/>
+                                <exclude reference="aex-5T-8ak"/>
+                                <exclude reference="dju-pX-9Pv"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="lyricsView" destination="twC-CN-gmO" id="rc0-Sz-LPM"/>
+                        <outlet property="nameField" destination="khr-m1-sV5" id="deJ-MW-xSj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="349"/>
+        </scene>
+    </scenes>
+</document>
