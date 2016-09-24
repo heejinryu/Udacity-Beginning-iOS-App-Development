@@ -29,13 +29,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    // MARK: - UITextFieldDelegate
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func reset(sender: AnyObject) {
         nameField.text = ""
         lyricsView.text = ""
@@ -51,8 +44,8 @@ class ViewController: UIViewController {
 
 func shortNameFromName(fullName: String) -> String {
     let lowerCaseName = fullName.lowercaseString
-    let myName = NSCharacterSet(charactersInString: lowerCaseName)
-    if let firstVowelName = fullName.rangeOfCharacterFromSet(myName, options: .CaseInsensitiveSearch) {
+    let myName = NSCharacterSet(charactersInString: fullName)
+    if let firstVowelName = lowerCaseName.rangeOfCharacterFromSet(myName, options: .CaseInsensitiveSearch) {
         return lowerCaseName.substringFromIndex(firstVowelName.startIndex)
     }
     return lowerCaseName
