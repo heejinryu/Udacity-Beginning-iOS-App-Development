@@ -39,22 +39,6 @@
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="oFX-u0-lGA"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twC-CN-gmO">
-                                <rect key="frame" x="60" y="240" width="480" height="320"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="EMl-Vf-HS5"/>
-                                    <constraint firstAttribute="height" constant="240" id="iGO-z5-KO9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="EMl-Vf-HS5"/>
-                                        <exclude reference="iGO-z5-KO9"/>
-                                    </mask>
-                                </variation>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silly Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcT-3V-vGG">
                                 <rect key="frame" x="60" y="40" width="480" height="100"/>
                                 <constraints>
@@ -72,6 +56,22 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twC-CN-gmO">
+                                <rect key="frame" x="60" y="240" width="480" height="320"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="EMl-Vf-HS5"/>
+                                    <constraint firstAttribute="height" constant="240" id="iGO-z5-KO9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EMl-Vf-HS5"/>
+                                        <exclude reference="iGO-z5-KO9"/>
+                                    </mask>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

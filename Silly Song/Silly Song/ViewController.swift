@@ -44,8 +44,8 @@ class ViewController: UIViewController {
 
 func shortNameFromName(fullName: String) -> String {
     let lowerCaseName = fullName.lowercaseString
-    let myName = NSCharacterSet(charactersInString: fullName)
-    if let firstVowelName = lowerCaseName.rangeOfCharacterFromSet(myName, options: .CaseInsensitiveSearch) {
+    let vowel = NSCharacterSet(charactersInString: "aeiou")
+    if let firstVowelName = lowerCaseName.rangeOfCharacterFromSet(vowel, options: .CaseInsensitiveSearch) {
         return lowerCaseName.substringFromIndex(firstVowelName.startIndex)
     }
     return lowerCaseName
