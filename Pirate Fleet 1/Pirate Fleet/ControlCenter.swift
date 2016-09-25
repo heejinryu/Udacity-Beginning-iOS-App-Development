@@ -48,10 +48,10 @@ struct Mine: PenaltyCell {
     let guaranteesHit: Bool
     let penaltyText: String
     
-    init(location: GridLocation) {
+    init(location: GridLocation, penaltyText: String) {
         self.location = location
         self.guaranteesHit = false
-        self.penaltyText = "Boom! You have hit a Mine!"
+        self.penaltyText = String()
     }
 }
 
@@ -83,16 +83,11 @@ class ControlCenter {
         human.addShipToGrid(largeShip)
         human.addShipToGrid(extraLargeShip)
         
-        let mine1 = Mine(location: GridLocation(x: 2, y: 3))
-        let mine2 = Mine(location: GridLocation(x: 4, y: 5))
+        let mine1 = Mine(location: GridLocation(x: 2, y: 3), penaltyText: "You hit a Mine!")
+        let mine2 = Mine(location: GridLocation(x: 4, y: 5), penaltyText: "Boom! You hit a Mine!")
         
         human.addMineToGrid(mine1)
         human.addMineToGrid(mine2)
-        
-        let seaMonster1 = SeaMonster(location: GridLocation(x: 1, y: 5))
-        let seaMonster2 = SeaMonster(location: GridLocation(x: 5, y: 3))
-        
-        
     }
     
     func calculateFinalScore(gameStats: GameStats) -> Int {
